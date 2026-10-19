@@ -35,11 +35,15 @@ function Navbar() {
           {menuOpen ? <X size={23} /> : <Menu size={23} />}
         </button>
         <div className={`navbar_links ${menuOpen ? "navbar_links-open" : ""}`}>
-          <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#home" onClick={closeMenu}>
+            Home
+          </a>
           <a href="#about">About</a>
           <a href="#vision">Our Vision</a>
           <a href="#principles">Our Approach</a>
-          <a href="#contact" className='button button_navbar'>Get in Touch <ArrowUpRight size={16} /></a>
+          <a href="#contact" className="button button_navbar">
+            Get in Touch <ArrowUpRight size={16} />
+          </a>
         </div>
       </nav>
     </header>
