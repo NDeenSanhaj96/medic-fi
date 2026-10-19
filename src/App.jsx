@@ -82,7 +82,7 @@ function HeroSection() {
             <div className="hero_note"><ShieldCheck size={17}/>Thoughtfully design around people and care.</div>
           </div>
           <div className="hero_img-container">
-            <img src="/images/hero_img.png" alt="healthcare professional in white coat" />
+            <img className="hero_img" src="/images/hero_img.png" alt="healthcare professional in white coat" />
           </div>
         </div>
         <div className="hero_bottom">

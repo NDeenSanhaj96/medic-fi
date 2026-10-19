@@ -95,7 +95,7 @@
   overflow: hidden;
   background: linear-gradient(105deg, #f4f4fa 0%, #f4f4fa 55%, #e9f3f4 100%);
 }
-
+/* 
 .hero_wash {
   position: absolute;
   top: -180px;
@@ -112,4 +112,40 @@
   inset: 42px;
   border: 1px solid rgb(20 139 145 / 8%);
   border-radius: 50%;
+} */
+
+.hero_grid-container {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: clamp(42px, 7vw, 92px);
+  padding: var(--space-24) 0;
+}
+
+.hero_description-container {
+  max-width: 560px;
+  padding: 8px 0 12px;
+}
+
+.hero_description-container .hero_eyebrow {
+  margin-bottom: var(--space-10);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #0d6f78;
+}
+
+.hero_eyebrow .eyebrow_dot {
+  width: 7px;
+  height: 7px;
+  background: #148b91;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #dceff0;
+}
+
+.hero_img-container .hero_img {
+  width: 80%;
 }
