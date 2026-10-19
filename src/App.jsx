@@ -1,5 +1,5 @@
 import "./App.css";
-import { HeartPulse, X, Menu, ArrowUpRight } from "lucide-react";
+import { HeartPulse, X, Menu, ArrowUpRight, ArrowRight, ArrowDownRight, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
 function Brand() {
@@ -66,7 +66,31 @@ function Navbar() {
 function HeroSection() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero_wash" aria-hidden="true"></div>
+      <div className="hero_wash" aria-hidden="true">
+        <div className="hero_grid-container container">
+          <div className="hero_description-container">
+            <p className="hero_eyebrow"><span className="eyebrow_dot" />A clearer path to good care</p>
+            <h1 className="hero_heading">Smart healthcare is here, <span>no more long queues.</span></h1>
+            <p className="hero_description-text">
+              Medic-FI is building a better way to check real-time hospital bed availability, 
+              book specialist appointments, and access emergency care across Kano state and nation wide.
+            </p>
+            <div className="hero_actions">
+              <a href="#vision" className="button">Explore our vision <ArrowRight size={17} /></a>
+              <a href="#about" className="text_link">Get know us <ArrowDownRight size={17} /></a>
+            </div>
+            <div className="hero_note"><ShieldCheck size={17}/>Thoughtfully design around people and care.</div>
+          </div>
+          <div className="hero_img-container">
+            <img src="/images/hero_img.png" alt="healthcare professional in white coat" />
+          </div>
+        </div>
+        <div className="hero_bottom">
+          <span>Built around simple belief</span>
+          <span className="hero_bottom-line"></span>
+          <span>Access should be easier to navigate</span>
+        </div>
+      </div>
     </section>
   );
 }
