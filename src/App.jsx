@@ -21,8 +21,8 @@ function Navbar() {
 
   return (
     <header className="site_header">
-      <Brand />
       <nav className="navbar container" aria-label="Main navigation">
+        <Brand />
         <button
           className="menu_toggle"
           type="button"
@@ -35,13 +35,26 @@ function Navbar() {
           {menuOpen ? <X size={23} /> : <Menu size={23} />}
         </button>
         <div className={`navbar_links ${menuOpen ? "navbar_links-open" : ""}`}>
-          <a href="#home" onClick={closeMenu}>
-            Home
-          </a>
-          <a href="#about">About</a>
-          <a href="#vision">Our Vision</a>
-          <a href="#principles">Our Approach</a>
-          <a href="#contact" className="button button_navbar">
+          <div className="navbar_main-links">
+            <a href="#home" onClick={closeMenu}>
+              Home
+            </a>
+            <a href="#about" onClick={closeMenu}>
+              About
+            </a>
+            <a href="#vision" onClick={closeMenu}>
+              Our Vision
+            </a>
+            <a href="#principles" onClick={closeMenu}>
+              Our Approach
+            </a>
+          </div>
+
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="button button_navbar"
+          >
             Get in Touch <ArrowUpRight size={16} />
           </a>
         </div>
