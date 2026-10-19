@@ -63,10 +63,21 @@ function Navbar() {
   );
 }
 
+function HeroSection() {
+  return (
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="hero_wash" aria-hidden="true"></div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <>
       <Navbar />
+      <main>
+        <HeroSection />
+      </main>
     </>
   );
 }
