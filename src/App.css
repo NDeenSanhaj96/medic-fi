@@ -430,6 +430,25 @@
   .hero_bottom {
     flex-wrap: wrap;
   }
+
+  .about_grid-container {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .about_main h2 {
+    margin-top: 0;
+  }
+
+  .about_body {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about_aside {
+    grid-column: auto;
+    margin-top: 4px;
+  }
 }
 
 @media (max-width: 480px) {
