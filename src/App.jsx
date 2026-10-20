@@ -135,7 +135,7 @@ function AboutSection() {
           </div>
           <a className="text_link text_link-dark" href="#principles">What guide us <ArrowRight size={17} /></a>
         </div>
-        <div className="about_side">
+        <div className="about_aside">
           <div className="about_monogram"><HeartPulse size={45} strokeWidth={1.5} /></div>
           <p className="about_side-quote">"Make the next step in healthcare feel clearer."</p>
           <span>THE IDEA BEHIND MEDIC-FI</span>

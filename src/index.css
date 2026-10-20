@@ -131,8 +131,27 @@ h3 {
   font-family: 'Manrope', sans-serif;
 }
 
-h1 span {
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 span,
+h2 span {
   color: #148b91;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  line-height: 1.75;
 }
 
 a {
@@ -142,6 +161,39 @@ a {
 .container {
   width: min(var(--container-width), calc(100% - var(--container-gutter)* 2));
   margin-inline: auto;
+}
+
+.section_label span {
+  color: #148b91;
+  font-family: 'Manrope', sans-serif;
+}
+
+.text_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  padding: var(--space-4);
+  border-radius: var(--space-3);
+  transition: border var(--transition-normal);
+}
+
+.text_link:hover {
+  border: 1px solid var(--color-primary-hover);
+}
+
+.text_link svg {
+  transition: transform var(--transition-normal);
+}
+
+.text_link svg:hover {
+  transform: translate(3px, -1px);
+}
+
+.text_link-dark {
+  color: var(--color-primary-hover);
 }
 
 .button {
