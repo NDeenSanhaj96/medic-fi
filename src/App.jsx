@@ -122,12 +122,36 @@ function HeroSection() {
   );
 }
 
+function AboutSection() {
+  return (
+    <section className="section about">
+      <div className="about_grid-container container">
+        <div className="section_label">ABOUT MEDIC-FI</div>
+        <div className="about_main">
+          <h2 id="aboutHeading">A better healthcare experience begins with <span>understanding.</span></h2>
+          <div className="about_body">
+            <p>When someone needs care, knowing where to start can be difficult. Information may feel scattered, the next step may be unclear, and the journey can become stressful than it needs to be.</p>
+            <p>Medic-FI is being developed around the idea that healthcare should be easier to navigate. We're are working toward a more connected experience for people seeking care and the professionals who support them.</p>
+          </div>
+          <a className="text_link text_link-dark" href="#principles">What guide us <ArrowRight size={17} /></a>
+        </div>
+        <div className="about_side">
+          <div className="about_monogram"><HeartPulse size={45} strokeWidth={1.5} /></div>
+          <p className="about_side-quote">"Make the next step in healthcare feel clearer."</p>
+          <span>THE IDEA BEHIND MEDIC-FI</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <>
       <Navbar />
       <main>
         <HeroSection />
+        <AboutSection />
       </main>
     </>
   );
