@@ -145,6 +145,22 @@ function AboutSection() {
   );
 }
 
+function VisionSection() {
+  return (
+    <section className="section vision" aria-labelledby="vision-title">
+      <div className="container">
+        <div className="section_heading">
+          <div className="section_label"><span>OUR VISION</span></div>
+          <div className="section_heading-row">
+            <h2 className="vision_heading">A more connected future for <span>healthcare.</span></h2>
+            <p>Our ambition is to make healthcare journey easier to understand, plan, and navigate - one thoughtful step at a time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <>
@@ -152,6 +168,7 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <VisionSection />
       </main>
     </>
   );
