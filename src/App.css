@@ -146,6 +146,24 @@
   box-shadow: 0 0 0 5px #dceff0;
 }
 
+.hero_description-container .hero_heading {
+  max-width: 610px;
+  margin-bottom: 22px;
+  line-height: 1.04;
+  letter-spacing: -0.068em;
+  font-size: clamp(2.75rem, 5.15vw, 4.55rem);
+  font-weight: var(--font-weight-black);
+  margin-bottom: 32px;
+}
+
+.hero_description-text {
+  max-width: 42ch;
+  font-size: var(--font-size-2xlg);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+  margin-bottom: 22px;
+}
+
 .hero_img-container .hero_img {
   width: 80%;
 }

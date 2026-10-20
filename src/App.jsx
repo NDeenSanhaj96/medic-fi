@@ -70,7 +70,7 @@ function HeroSection() {
         <div className="hero_grid-container container">
           <div className="hero_description-container">
             <p className="hero_eyebrow"><span className="eyebrow_dot" />A clearer path to good care</p>
-            <h1 className="hero_heading">Smart healthcare is here, <span>no more long queues.</span></h1>
+            <h1 className="hero_heading">Smart healthcare is here. <br /> <span>No more long queues.</span></h1>
             <p className="hero_description-text">
               Medic-FI is building a better way to check real-time hospital bed availability, 
               book specialist appointments, and access emergency care across Kano state and nation wide.
