@@ -53,7 +53,7 @@ function Navbar() {
           <a
             href="#contact"
             onClick={closeMenu}
-            className="button button_navbar"
+            className="button button_navbar button_primary"
           >
             Get in Touch <ArrowUpRight size={16} />
           </a>
@@ -76,8 +76,8 @@ function HeroSection() {
               book specialist appointments, and access emergency care across Kano state and nation wide.
             </p>
             <div className="hero_actions">
-              <a href="#vision" className="button">Explore our vision <ArrowRight size={17} /></a>
-              <a href="#about" className="text_link">Get know us <ArrowDownRight size={17} /></a>
+              <a href="#vision" className="button button_primary">Explore our vision <ArrowRight size={17} /></a>
+              <a href="#about" className=" button button_secondary text_link">Get know us <ArrowDownRight size={17} /></a>
             </div>
             <div className="hero_note"><ShieldCheck size={17}/>Thoughtfully design around people and care.</div>
           </div>
