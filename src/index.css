@@ -167,3 +167,19 @@ a {
   background: var(--color-primary-hover);
   transform: translateY(-1px);
 }
+
+/* 
+===================
+  Media Queries
+===================
+*/
+
+@media (max-width: 700px) {
+  :root {
+    --container-gutter: 22px;
+  }
+
+  section {
+    padding: 76px 0;
+  }
+}

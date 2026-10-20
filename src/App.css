@@ -341,3 +341,29 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 480px) {
+  :root {
+    --container-gutter: 18px;
+  }
+
+  .hero_actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero_note {
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .hero_img-frame {
+    height: 410px;
+  }
+
+  .hero_button {
+    gap: 9px;
+    font-size: 0.7rem;
+  }
+}
