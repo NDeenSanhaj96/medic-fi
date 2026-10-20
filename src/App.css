@@ -386,6 +386,12 @@
   line-height: var(--line-height-body);
   color: #a8c7ca;
 }
+
+.vision_card span {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: #7dd0d1;
+}
 /* 
 ====================
   Media Queries
@@ -524,6 +530,28 @@
   .about_aside {
     grid-column: auto;
     margin-top: 4px;
+  }
+
+  .section_heading-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vision_cards {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .vision_card {
+    min-height: 0;
+  }
+
+  .vision_card-top {
+    margin-bottom: 25px;
+  }
+
+  .vision_card p {
+    min-height: 0;
   }
 }
 
