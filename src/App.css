@@ -219,3 +219,25 @@
   font-size: var(--font-size-xs);
   letter-spacing: 0.17em;
 }
+
+.hero_bottom {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #dfeace;
+  font-size: var(--font-size-xs);
+  color: #148b91;
+}
+
+.hero_bottom-line {
+  width: 35px;
+  height: 1px;
+  background: #a8c7ca;
+}
+
+.hero_bottom span:last-child {
+  color: #425f6b;
+  font-weight: var(--font-weight-medium);
+}

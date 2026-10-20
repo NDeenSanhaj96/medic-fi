@@ -112,7 +112,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="hero_bottom">
+        <div className="hero_bottom container">
           <span>Built around simple belief</span>
           <span className="hero_bottom-line"></span>
           <span>Access should be easier to navigate</span>
