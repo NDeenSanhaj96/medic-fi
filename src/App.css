@@ -252,6 +252,21 @@
 
 */
 
+@media (max-width: 1000px) {
+  .hero_grid-container {
+    gap: 42px;
+    grid-template-columns: 1fr 0.9fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.5vw, 3.7rem);
+  }
+
+  .hero_img-frame {
+    height: 430px;
+  }
+}
+
 @media (max-width: 760px) {
   .navbar {
     min-height: 72px;
