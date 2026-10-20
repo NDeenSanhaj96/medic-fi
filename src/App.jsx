@@ -7,8 +7,32 @@ import {
   ArrowRight,
   ArrowDownRight,
   ShieldCheck,
+  Search,
+  Stethoscope,
+  HeartHandshake
 } from "lucide-react";
 import { useState } from "react";
+
+const futureAmbitions = [
+  {
+    icon: Search,
+    number: '01',
+    title: 'Check hospital beds availability',
+    description: 'A smart way designed to help you check hospital beds availability, explore healthcare options clearer and less stressful.'
+  },
+  {
+    icon: Stethoscope,
+    number: '02',
+    title: 'Book Doctor Appointment',
+    description: 'We envision to simpler ways to help you book an appointment with a healthcare professionals and plan the next step when you need it.'
+  },
+  {
+    icon: HeartHandshake,
+    number: '03',
+    title: 'Connect the care journey',
+    description: 'A more connected experience designed for people seeking care and the professionals who provide it.'
+  }
+]
 
 function Brand() {
   return (
