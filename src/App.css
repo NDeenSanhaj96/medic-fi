@@ -172,6 +172,50 @@
   gap: var(--space-10);
 }
 
+.hero_note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-12);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.hero_note svg {
+  color: var(--color-secondary);
+} 
+
+.hero_img-container {
+  max-width: 510px;
+  justify-self: end;
+  width: 100%;
+  padding: 0 16px 16px 0;
+  position: relative;
+}
+
+.hero_img-frame {
+  /* position: relative; */
+  overflow: hidden;
+  height: clamp(390px, 43vw, 535px);
+  border-radius: 190px 190px 16px 16px;
+  background: #dce9eb;
+  box-shadow: 0 26px 60px rgb(23 55 71 / 12%);
+}
+
 .hero_img-container .hero_img {
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.hero_side-label {
+  position: absolute;
+  right: -20px;
+  top: 35%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.17em;
 }
