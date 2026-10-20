@@ -148,7 +148,7 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="section about">
+    <section className="section about" aria-labelledby="about-title">
       <div className="about_grid-container container">
         <div className="section_label">ABOUT MEDIC-FI</div>
         <div className="about_main">
@@ -197,6 +197,29 @@ function VisionSection() {
   );
 }
 
+function ApproachSection() {
+  return (
+    <section className="section approach" aria-labelledby="approach-title">
+      <div className="container approach_grid-container">
+        <div className="approach_description-container">
+          <div className="section_label">OUR APPROACH</div>
+          <h2 className="approach_heading">
+            Technology with a <span>human point of view.</span>
+          </h2>
+          <p>
+            Healthcare is personal. The technology around it should respect that
+            - with clear information, thoughtful experiences, and a focus on
+            people using it.
+          </p>
+          <div className="approach_seal">
+            <Stethoscope size={21} /> <span>Designed with care in mind.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <>
@@ -205,6 +228,7 @@ function App() {
         <HeroSection />
         <AboutSection />
         <VisionSection />
+        <ApproachSection />
       </main>
     </>
   );
