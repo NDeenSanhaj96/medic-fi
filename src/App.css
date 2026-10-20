@@ -330,6 +330,16 @@
   .hero_img-frame {
     height: 430px;
   }
+
+  .about_grid-container {
+    grid-template-columns: 1fr 2fr;
+    gap: 28px;
+  }
+
+  .about_aside {
+    grid-column: 2;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 760px) {
