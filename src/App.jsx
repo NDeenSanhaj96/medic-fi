@@ -180,6 +180,18 @@ function VisionSection() {
             <p>Our ambition is to make healthcare journey easier to understand, plan, and navigate - one thoughtful step at a time.</p>
           </div>
         </div>
+        <div className="vision_cards">
+          {futureAmbitions.map(({ icon: Icon, number, title, description }) => {
+            return (
+              <article className="vision_card" key={number}>
+                <div className="vision_card-top"><span>{number}</span><Icon size={23} strokeWidth={1.7} /></div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <span className="vision_card-future">FUTURE DIRECTION</span>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   );
