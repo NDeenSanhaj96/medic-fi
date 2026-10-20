@@ -9,30 +9,49 @@ import {
   ShieldCheck,
   Search,
   Stethoscope,
-  HeartHandshake
+  HeartHandshake,
+  Check,
 } from "lucide-react";
 import { useState } from "react";
 
 const futureAmbitions = [
   {
     icon: Search,
-    number: '01',
-    title: 'Check hospital beds availability',
-    description: 'A smart way designed to help you check hospital beds availability, explore healthcare options clearer and less stressful.'
+    number: "01",
+    title: "Check hospital beds availability",
+    description:
+      "A smart way designed to help you check hospital beds availability, explore healthcare options clearer and less stressful.",
   },
   {
     icon: Stethoscope,
-    number: '02',
-    title: 'Book Doctor Appointment',
-    description: 'We envision to simpler ways to help you book an appointment with a healthcare professionals and plan the next step when you need it.'
+    number: "02",
+    title: "Book Doctor Appointment",
+    description:
+      "We envision to simpler ways to help you book an appointment with a healthcare professionals and plan the next step when you need it.",
   },
   {
     icon: HeartHandshake,
-    number: '03',
-    title: 'Connect the care journey',
-    description: 'A more connected experience designed for people seeking care and the professionals who provide it.'
-  }
-]
+    number: "03",
+    title: "Connect the care journey",
+    description:
+      "A more connected experience designed for people seeking care and the professionals who provide it.",
+  },
+];
+
+const values = [
+  [
+    "People first",
+    "Every improvement should begin with real needs of people navigating healthcare.",
+  ],
+  [
+    "Clarity over complexity",
+    "Useful information should feel understandable, considered and easier to act on.",
+  ],
+  [
+    "Better connected",
+    "We believe thoughtful technology can help make healthcare journeys feel less fragmented.",
+  ],
+];
 
 function Brand() {
   return (
@@ -152,16 +171,34 @@ function AboutSection() {
       <div className="about_grid-container container">
         <div className="section_label">ABOUT MEDIC-FI</div>
         <div className="about_main">
-          <h2 id="aboutHeading">A better healthcare experience begins with <span>understanding.</span></h2>
+          <h2 id="aboutHeading">
+            A better healthcare experience begins with{" "}
+            <span>understanding.</span>
+          </h2>
           <div className="about_body">
-            <p>When someone needs care, knowing where to start can be difficult. Information may feel scattered, the next step may be unclear, and the journey can become stressful than it needs to be.</p>
-            <p>Medic-FI is being developed around the idea that healthcare should be easier to navigate. We're are working toward a more connected experience for people seeking care and the professionals who support them.</p>
+            <p>
+              When someone needs care, knowing where to start can be difficult.
+              Information may feel scattered, the next step may be unclear, and
+              the journey can become stressful than it needs to be.
+            </p>
+            <p>
+              Medic-FI is being developed around the idea that healthcare should
+              be easier to navigate. We're are working toward a more connected
+              experience for people seeking care and the professionals who
+              support them.
+            </p>
           </div>
-          <a className="text_link text_link-dark" href="#principles">What guide us <ArrowRight size={17} /></a>
+          <a className="text_link text_link-dark" href="#principles">
+            What guide us <ArrowRight size={17} />
+          </a>
         </div>
         <div className="about_aside">
-          <div className="about_monogram"><HeartPulse size={45} strokeWidth={1.5} /></div>
-          <p className="about_side-quote">"Make the next step in healthcare feel clearer."</p>
+          <div className="about_monogram">
+            <HeartPulse size={45} strokeWidth={1.5} />
+          </div>
+          <p className="about_side-quote">
+            "Make the next step in healthcare feel clearer."
+          </p>
           <span>THE IDEA BEHIND MEDIC-FI</span>
         </div>
       </div>
@@ -174,22 +211,32 @@ function VisionSection() {
     <section className="section vision" aria-labelledby="vision-title">
       <div className="container">
         <div className="section_heading">
-          <div className="section_label section_label-light"><span>OUR VISION</span></div>
+          <div className="section_label section_label-light">
+            <span>OUR VISION</span>
+          </div>
           <div className="section_heading-row">
-            <h2 className="vision_heading">A more connected future for <span>healthcare.</span></h2>
-            <p>Our ambition is to make healthcare journey easier to understand, plan, and navigate - one thoughtful step at a time.</p>
+            <h2 className="vision_heading">
+              A more connected future for <span>healthcare.</span>
+            </h2>
+            <p>
+              Our ambition is to make healthcare journey easier to understand,
+              plan, and navigate - one thoughtful step at a time.
+            </p>
           </div>
         </div>
         <div className="vision_cards">
           {futureAmbitions.map(({ icon: Icon, number, title, description }) => {
             return (
               <article className="vision_card" key={number}>
-                <div className="vision_card-top"><span>{number}</span><Icon size={23} strokeWidth={1.7} /></div>
+                <div className="vision_card-top">
+                  <span>{number}</span>
+                  <Icon size={23} strokeWidth={1.7} />
+                </div>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <span className="vision_card-future">FUTURE DIRECTION</span>
               </article>
-            )
+            );
           })}
         </div>
       </div>
@@ -214,6 +261,20 @@ function ApproachSection() {
           <div className="approach_seal">
             <Stethoscope size={21} /> <span>Designed with care in mind.</span>
           </div>
+        </div>
+        <div className="value_list">
+          {values.map(([title, description], index) => {
+            return (
+              <article className="value_item" key={title}>
+                <div className="value_item-index">0{index + 1}</div>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+                <Check size={19} className="value_item-check" />
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
