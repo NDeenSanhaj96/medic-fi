@@ -58,7 +58,7 @@ function Brand() {
   return (
     <a href="#home" className="brand" aria-label="Medic-FI home">
       <span className="brand_icon" aria-label="true">
-        <HeartPulse size={25} stroke={2.2} />
+        <HeartPulse  size={25} strokeWidth={2.2}/>
       </span>
       <span className="brand_word">
         Medic<span>-FI</span>
