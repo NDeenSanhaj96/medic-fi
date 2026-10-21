@@ -724,10 +724,10 @@
     gap: 55px;
   }
 
-   .footer__top {
+   .footer_top {
     grid-template-columns: 1fr auto;
   }
-  .footer__links {
+  .footer_links {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-content: flex-start;
@@ -907,4 +907,23 @@
   .contact_form-heading {
     flex-direction: column;
   }
+
+  .footer_top {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .footer_links {
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .footer_top-link {
+    justify-self: start;
+  }
+  .footer_bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
 }
