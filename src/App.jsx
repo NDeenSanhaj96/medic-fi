@@ -294,13 +294,26 @@ function ContactSection() {
     `
   }
 
+  function validateForm() {
+    const formElement = document.querySelector('.contact_form')
+
+    if (!formElement.reportValidity()) {
+      return false
+    }
+    return true
+  }
+
   function handleWhatsApp() {
+
+    if (!validateForm()) return
     const message = encodeURIComponent(createMessage());
     const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${message}`
     window.open(whatsappURL, '_blank', 'noopener, noreferrer')
   }
 
   function handleEmail() {
+
+    if (!validateForm()) return
     const subject = encodeURIComponent(
       'New enquiry from the Medic-FI website'
     )
