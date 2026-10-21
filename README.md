@@ -1,16 +1,84 @@
-# React + Vite
+# Medic-FI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React website concept for Medic-FI, a healthcare-focused company with a vision to improve access to healthcare information and connections in Nigeria.
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Medic-FI aims to address healthcare access challenges by exploring ways to make it easier for people to find relevant healthcare information and connect with healthcare providers.
 
-## React Compiler
+This website introduces the company's background, vision, approach, and contact information.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Project status:** Informational website. Medic-FI's planned healthcare services are not currently represented as operational services on this website.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive layout for desktop and mobile devices
+- Company introduction and vision sections
+- Overview of the company's intended approach
+- Contact form interface with WhatsApp and email options
+- Reusable React components
+- Responsive navigation
+
+## Technologies Used
+
+- React
+- JavaScript
+- Vite
+- CSS
+- Lucide React icons
+
+## Getting Started
+
+### Prerequisites
+
+Install Node.js and npm on your computer.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone YOUR_REPOSITORY_URL
+   ```
+
+2. Enter the project directory:
+
+   ```bash
+   cd medic-fi
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+### Build for Production
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+To preview the production build locally, run:
+
+```bash
+npm run preview
+```
+
+## Contact
+
+For general enquiries, use the contact options displayed on the website.
+
+## Important Note
+
+This repository contains the website project. It does not, by itself, provide a backend, appointment-booking system, hospital directory, or other operational healthcare services.
