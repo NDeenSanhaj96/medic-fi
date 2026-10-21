@@ -471,6 +471,38 @@
   color: #0d6f78;
 }
 
+/* The Contact Section */
+
+.contact {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-20);
+  background: var(--color-white-background);
+}
+
+.contact_grid-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: start;
+  gap: clamp(50px, 9vw, 130px);
+}
+
+.contact_description-container h2 {
+  margin: 29px 0 22px;
+}
+
+.contact_description-container p {
+  max-width: 460px;
+  margin-bottom: 30px;
+  color: #425f6b;
+}
+
+.contact_prompt > svg {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #425f6b;
+}
+
 /* 
 ====================
   Media Queries
