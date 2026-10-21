@@ -117,7 +117,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero_wash" aria-hidden="true">
         <div className="hero_grid-container container">
           <div className="hero_description-container">
@@ -168,7 +168,7 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="section about" aria-labelledby="about-title">
+    <section className="section about" id="about" aria-labelledby="about-title">
       <div className="about_grid-container container">
         <div className="section_label">ABOUT MEDIC-FI</div>
         <div className="about_main">
@@ -209,7 +209,7 @@ function AboutSection() {
 
 function VisionSection() {
   return (
-    <section className="section vision" aria-labelledby="vision-title">
+    <section className="section vision" id="vision" aria-labelledby="vision-title">
       <div className="container">
         <div className="section_heading">
           <div className="section_label section_label-light">
@@ -247,7 +247,7 @@ function VisionSection() {
 
 function ApproachSection() {
   return (
-    <section className="section approach" aria-labelledby="approach-title">
+    <section className="section approach" id="principles" aria-labelledby="approach-title">
       <div className="container approach_grid-container">
         <div className="approach_description-container">
           <div className="section_label">OUR APPROACH</div>
