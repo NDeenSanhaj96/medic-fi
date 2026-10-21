@@ -354,6 +354,9 @@ function ContactSection() {
               Send via Email
             </button>
           </div>
+          <p className="contact_form-note">
+            Choose your preferred contact method. Review your message and press send in WhatsApp or your email application.
+          </p>
         </form>
       </div>
     </section>
