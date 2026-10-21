@@ -71,14 +71,16 @@
   color: var(--color-primary);
 }
 
-.button_secondary {
+.button_secondary,
+.button_email {
   padding: var(--space-4);
   color: var(--color-text-primary);
   border: 1px solid var(--color-border-strong);
   transition: all var(--transition-normal);
 }
 
-.button_secondary:hover {
+.button_secondary:hover,
+.button_email:hover {
   color: var(--color-text-inverse);
   background: var(--color-primary);
   transform: translateY(-1px);
@@ -535,7 +537,91 @@
 .contact_form-heading {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dce9eb;
 }
+
+.contact_form-heading span:first-child {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.11em;
+  color: var(--color-primary);
+}
+
+.contact_form-heading span:last-child {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.contact_form label {
+  display: block;
+  padding: 19px 0 8px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.contact_form label span {
+  color: var(--color-text-muted);
+}
+
+.contact_form input,
+.contact_form textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
+  background: var(--color-white-background);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgb(20 139 145 / 12%);
+}
+
+.contact_form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.contact_form-submit {
+  width: 100%;
+  margin-top: 21px;
+}
+
+.contact_form-note {
+  margin: 12px 0 0;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.contact_form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact_form-actions .contact_form-submit {
+  margin-top: 0;
+}
+
+.button_email {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid currentColor;
+}
+
+
 
 /* 
 ====================
