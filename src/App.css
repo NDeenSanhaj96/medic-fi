@@ -496,11 +496,45 @@
   color: #425f6b;
 }
 
-.contact_prompt > svg {
+.contact_prompt {
   display: flex;
   align-items: center;
   gap: 13px;
   color: #425f6b;
+}
+
+.contact_prompt > svg {
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  padding: 11px;
+  border-radius: 10px;
+  background: #a8c7ca;
+}
+
+.contact_prompt span {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+}
+
+.contact_prompt small {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}
+
+.contact_form {
+  padding: 29px;
+  border: 1px solid #a8c7ca;
+  border-radius: 12px;
+  background: #fbfdfd;
+  box-shadow: 0 14px 45px rgb(23 55 71 / 4%);
+}
+
+.contact_form-heading {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 
