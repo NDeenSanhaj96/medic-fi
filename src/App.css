@@ -621,6 +621,73 @@
   border: 1px solid currentColor;
 }
 
+.footer {
+  padding: 42px 0 0;
+  background: #102f3d;
+  color: var(--color-text-inverse);
+}
+
+.footer_top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 38px;
+}
+
+
+.footer .brand_word {
+  color: var(--color-text-inverse);
+}
+
+.footer .brand_icon {
+  color: #8bd2d3;
+  background: rgb(255 255 255 / 10%);
+}
+
+.footer_brand-block p {
+  max-width: 320px;
+  margin: 14px 0 0;
+  color: #afc2c9;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer_links a,
+.footer_top-link {
+  color: #d0dde1;
+  text-decoration: none;
+  font-size: 0.79rem;
+}
+
+.footer_links a:hover,
+.footer_top-link:hover {
+  color: #8bd2d3;
+}
+
+.footer_top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgb(255 255 255 / 13%);
+  color: #91aab3;
+  font-size: 0.72rem;
+}
 /* 
 ====================
   Media Queries
