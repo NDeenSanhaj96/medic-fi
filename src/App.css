@@ -632,6 +632,11 @@
   .vision_card p {
     min-height: 0;
   }
+
+  .approach_grid-container {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
 }
 
 @media (max-width: 480px) {
