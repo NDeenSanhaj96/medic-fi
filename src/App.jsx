@@ -284,6 +284,13 @@ function ApproachSection() {
 
 function ContactSection() {
   const [form, setForm] = useState({name: '', email: '', message: ''});
+  function clearForm() {
+    setForm({
+      name: '',
+      email: '',
+      message: ''
+    });
+  }
   const companyWhatsApp = '2348146331278';
   const companyEmail = 'nkdatti96@gmail.com';
   function createMessage() {
@@ -309,6 +316,7 @@ function ContactSection() {
     const message = encodeURIComponent(createMessage());
     const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${message}`
     window.open(whatsappURL, '_blank', 'noopener, noreferrer')
+    clearForm();
   }
 
   function handleEmail() {
@@ -319,6 +327,7 @@ function ContactSection() {
     )
     const body = encodeURIComponent(createMessage())
     const emailURL = `mailto:${companyEmail}?subject=${subject}&body=${body}`
+    clearForm();
     window.location.href = emailURL
   }
 
