@@ -11,7 +11,7 @@ import {
   Stethoscope,
   HeartHandshake,
   Check,
-  MessageCircle
+  MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -283,93 +283,174 @@ function ApproachSection() {
 }
 
 function ContactSection() {
-  const [form, setForm] = useState({name: '', email: '', message: ''});
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   function clearForm() {
     setForm({
-      name: '',
-      email: '',
-      message: ''
+      name: "",
+      email: "",
+      message: "",
     });
   }
-  const companyWhatsApp = '2348146331278';
-  const companyEmail = 'nkdatti96@gmail.com';
+  const companyWhatsApp = "2348146331278";
+  const companyEmail = "nkdatti96@gmail.com";
   function createMessage() {
     return `Hello Medic-FI, 
     My name is ${form.name}.
     My email address is ${form.email}.
     Message: ${form.message}
-    `
+    `;
   }
 
   function validateForm() {
-    const formElement = document.querySelector('.contact_form')
+    const formElement = document.querySelector(".contact_form");
 
     if (!formElement.reportValidity()) {
-      return false
+      return false;
     }
-    return true
+    return true;
   }
 
   function handleWhatsApp() {
-
-    if (!validateForm()) return
+    if (!validateForm()) return;
     const message = encodeURIComponent(createMessage());
-    const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${message}`
-    window.open(whatsappURL, '_blank', 'noopener, noreferrer')
+    const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${message}`;
+    window.open(whatsappURL, "_blank", "noopener, noreferrer");
     clearForm();
   }
 
   function handleEmail() {
-
-    if (!validateForm()) return
-    const subject = encodeURIComponent(
-      'New enquiry from the Medic-FI website'
-    )
-    const body = encodeURIComponent(createMessage())
-    const emailURL = `mailto:${companyEmail}?subject=${subject}&body=${body}`
+    if (!validateForm()) return;
+    const subject = encodeURIComponent("New enquiry from the Medic-FI website");
+    const body = encodeURIComponent(createMessage());
+    const emailURL = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
     clearForm();
-    window.location.href = emailURL
+    window.location.href = emailURL;
   }
 
   return (
-    <section className="section contact" id="contact" aria-labelledby="contact-title">
+    <section
+      className="section contact"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <div className="container contact_grid-container">
         <div className="contact_description-container">
           <div className="section_label">LET'S CONNECT</div>
-          <h2 id="contactHeading">Have a thought to <span>share?</span></h2>
-          <p>we are shaping the next chapter of Medic-FI. If you are a healthcare professional, potential partner, or simply interested in our vision, we will be glad to hear from you.</p>
+          <h2 id="contactHeading">
+            Have a thought to <span>share?</span>
+          </h2>
+          <p>
+            we are shaping the next chapter of Medic-FI. If you are a healthcare
+            professional, potential partner, or simply interested in our vision,
+            we will be glad to hear from you.
+          </p>
           <div className="contact_prompt">
-            <MessageCircle size={20} /><span>Start a conversation.<br /><small>Every meaningful connection starts somewhere.</small></span>
+            <MessageCircle size={20} />
+            <span>
+              Start a conversation.
+              <br />
+              <small>Every meaningful connection starts somewhere.</small>
+            </span>
           </div>
         </div>
-        <form className="contact_form" onSubmit={(event) => event.preventDefault()}>
+        <form
+          className="contact_form"
+          onSubmit={(event) => event.preventDefault()}
+        >
           <div className="contact_form-heading">
             <span>YOUR MESSAGE</span>
             <span>Fields marked * are required</span>
           </div>
-          <label htmlFor="name"><span>Your name<span>*</span></span></label>
-          <input type="text" name="name" id="name" autoComplete="name" required value={form.name} onChange={(e) => setForm({...form, name: e.target.value})} placeholder="How should we address you?" />
-          <label htmlFor="email">Email address<span>*</span></label>
-          <input type="email" name="email" id="email" autoComplete="email" required value={form.email} onChange={(e) => setForm({...form, email: e.target.value})} placeholder="you@example.com" />
-          <label htmlFor="message">What would like to discuss <span>*</span></label>
-          <textarea name="message" id="message" rows={4} required value={form.message} onChange={(e) => setForm({...form, message: e.target.value})} placeholder="Tell us a little about it..."></textarea>
+          <label htmlFor="name">
+            <span>
+              Your name<span>*</span>
+            </span>
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autoComplete="name"
+            required
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            placeholder="How should we address you?"
+          />
+          <label htmlFor="email">
+            Email address<span>*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autoComplete="email"
+            required
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            placeholder="you@example.com"
+          />
+          <label htmlFor="message">
+            What would like to discuss <span>*</span>
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            rows={4}
+            required
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            placeholder="Tell us a little about it..."
+          ></textarea>
           <div className="contact_form-actions">
-            <button className="button button_primary contact_form-submit" type="button" onClick={handleWhatsApp}>
-              <MessageCircle size={17}/>
+            <button
+              className="button button_primary contact_form-submit"
+              type="button"
+              onClick={handleWhatsApp}
+            >
+              <MessageCircle size={17} />
               Send via WhatsApp
             </button>
-            <button className="button button_email contact_form-submit" type="button" onClick={handleEmail}>
+            <button
+              className="button button_email contact_form-submit"
+              type="button"
+              onClick={handleEmail}
+            >
               <ArrowRight size={17} />
               Send via Email
             </button>
           </div>
           <p className="contact_form-note">
-            Choose your preferred contact method. Review your message and press send in WhatsApp or your email application.
+            Choose your preferred contact method. Review your message and press
+            send in WhatsApp or your email application.
           </p>
         </form>
       </div>
     </section>
-  )
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container footer_top">
+        <div className="footer_brand-block">
+          <Brand />
+          <p>Healthcare closer to you.</p>
+        </div>
+        <div className="footer_links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#vision">Our Vision</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#home" className="footer_top-link">Back to Top <ArrowUpRight size={17} /></a>
+        <div className="container footer_bottom">
+          <span>&copy; {new Date().getFullYear()} Medic-FI. Concept Website.</span>
+          <span>Healthcare journey should not be stressful.</span>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 function App() {
@@ -382,6 +463,7 @@ function App() {
         <VisionSection />
         <ApproachSection />
         <ContactSection />
+        <Footer />
       </main>
     </>
   );
