@@ -149,8 +149,8 @@ function HeroSection() {
             <div className="hero_img-frame">
               <img
                 className="hero_img"
-                src="/images/hero_img.png"
-                alt="healthcare professional in white coat"
+                src={`${import.meta.env.BASE_URL}images/hero_img.png`}
+                alt="Healthcare professional in a white coat"
               />
               <div className="hero_side-label">Healthcare closer to you.</div>
             </div>
