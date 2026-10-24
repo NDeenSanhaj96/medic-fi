@@ -10,18 +10,21 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #123b52;
-  --color-primary-hover: #1b536e;
-  --color-secondary: #168b9c;
-  --color-white-background: #fffff0;
-  --color-navy: #153e50;
+ --color-primary: #2878e5;
+  --color-primary-hover: #1d5fbd;
+  --color-secondary: #20a4b5;
+  --color-navy: #172554;
 
   /* Text Colors */
 
-  --color-text-primary: #475569;
-  --color-text-secondary: #526471;
-  --color-text-muted: #71808b;
+ --color-text-primary: #334155;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
   --color-text-inverse: #ffffff;
+
+  /* Background Colors */
+  --color-white-background: #ffffff;
+  --color-background-soft: #f3f7ff;
 
   /* Surface Colors */
 
@@ -140,7 +143,7 @@ p {
 
 h1 span,
 h2 span {
-  color: #148b91;
+  color: var(--color-secondary);
 }
 
 h2 {
@@ -164,7 +167,7 @@ a {
 }
 
 .section_label span {
-  color: #148b91;
+  color: var(--color-secondary);
   font-family: 'Manrope', sans-serif;
 }
 

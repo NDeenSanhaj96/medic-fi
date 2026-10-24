@@ -604,7 +604,7 @@
 
 .footer {
   padding: 42px 0 0;
-  background: #102f3d;
+  background: var(--color-navy);
   color: var(--color-text-inverse);
 }
 
@@ -622,7 +622,7 @@
 }
 
 .footer .brand_icon {
-  color: #8bd2d3;
+  color: var(--color-secondary);
   background: rgb(255 255 255 / 10%);
 }
 
@@ -650,7 +650,7 @@
 
 .footer_links a:hover,
 .footer_top-link:hover {
-  color: #8bd2d3;
+  color: var(--color-secondary);
 }
 
 .footer_top-link {
