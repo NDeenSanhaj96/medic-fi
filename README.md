@@ -26,6 +26,8 @@ This website introduces the company's background, vision, approach, and contact 
 - Vite
 - CSS
 - Lucide React icons
+- Git and GitHub
+- GitHub Pages
 
 ## Getting Started
 
