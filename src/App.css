@@ -21,49 +21,7 @@
   gap: 28px;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-4);
-  font-size: var(--font-size-2xlg);
-  font-weight: var(--font-weight-semibold);
-  font-style: italic;
-  color: var(--color-primary);
-  text-decoration: none;
-  white-space: nowrap;
-}
 
-.brand_word span {
-  color: var(--color-secondary);
-}
-
-.brand_icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--color-primary);
-}
-
-.medical_symbol {
-  width: 100%;
-  height: 100%;
-}
-
-.medical_plus {
-  fill: #20a4b5;
-}
-
-.heart_line {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 3.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .navbar_links {
   display: flex;

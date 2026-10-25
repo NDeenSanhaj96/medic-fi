@@ -57,18 +57,7 @@ const values = [
 function Brand() {
   return (
     <a href="#home" className="brand" aria-label="Medic-FI home">
-      <span className="brand_icon" aria-label="true">
-        {/* <HeartPulse  size={25} strokeWidth={2.2}/> */}
-        <svg className="brand_symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        {/* Medical plus behind the heartbeat */}
-        <path className="medical_plus" d="M27 7 H37 V27 H57 V37 H37 V57 H27 V37 H7 V27 H27 Z" />
-        {/* Heartbeat in the foreground */}
-        <path className="heartbeat_line" d="M5 33 H18 L25 22 L32 44 L40 17 L46 33 H56" />
-        </svg>
-      </span>
-      <span className="brand_word">
-        Medic<span>-FI</span>
-      </span>
+      <img src="images/medic_logo.png" alt="" />
     </a>
   );
 }
