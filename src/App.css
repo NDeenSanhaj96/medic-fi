@@ -21,7 +21,14 @@
   gap: 28px;
 }
 
+.brand {
+  width: 150px;
+}
 
+.brand .brand_img {
+  width: 100%;
+  max-width: 350px;
+}
 
 .navbar_links {
   display: flex;

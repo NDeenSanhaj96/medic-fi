@@ -57,7 +57,7 @@ const values = [
 function Brand() {
   return (
     <a href="#home" className="brand" aria-label="Medic-FI home">
-      <img src="images/medic_logo.png" alt="" />
+      <img className="brand_img" src="images/medic_logo.png" alt="medic-fi logo" />
     </a>
   );
 }
