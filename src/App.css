@@ -609,12 +609,8 @@
   background: rgb(255 255 255 / 10%);
 }
 
-.footer_brand-block p {
-  max-width: 320px;
-  margin: 14px 0 0;
-  color: #afc2c9;
-  font-size: 0.8rem;
-  line-height: 1.7;
+.footer_brand-block {
+  width: 150px;
 }
 
 .footer_links {

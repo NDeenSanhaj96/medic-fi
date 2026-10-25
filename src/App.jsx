@@ -430,7 +430,6 @@ function Footer() {
       <div className="container footer_top">
         <div className="footer_brand-block">
           <Brand />
-          <p>Healthcare closer to you.</p>
         </div>
         <div className="footer_links">
           <a href="#home">Home</a>
