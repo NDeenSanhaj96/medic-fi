@@ -145,8 +145,8 @@ function HeroSection() {
             <div className="hero_img-frame">
               <img
                 className="hero_img"
-                src={`${import.meta.env.BASE_URL}images/hero_img.png`}
-                alt="Healthcare professional in a white coat"
+                src={`${import.meta.env.BASE_URL}images/hero_img.jpg`}
+                alt="white coat and stethoscope"
               />
               <div className="hero_side-label">Healthcare closer to you.</div>
             </div>
@@ -287,8 +287,8 @@ function ContactSection() {
       message: "",
     });
   }
-  const companyWhatsApp = "2348146331278";
-  const companyEmail = "nkdatti96@gmail.com";
+  const companyWhatsApp = "07041684666";
+  const companyEmail = "info@medicfi.gmail.com";
   function createMessage() {
     return `Hello Medic-FI, 
     My name is ${form.name}.
