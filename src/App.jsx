@@ -57,7 +57,11 @@ const values = [
 function Brand() {
   return (
     <a href="#home" className="brand" aria-label="Medic-FI home">
-      <img className="brand_img" src="images/medic_logo.png" alt="medic-fi logo" />
+      <img
+        className="brand_img"
+        src="images/medic_logo.png"
+        alt="medic-fi logo"
+      />
     </a>
   );
 }
@@ -205,7 +209,11 @@ function AboutSection() {
 
 function VisionSection() {
   return (
-    <section className="section vision" id="vision" aria-labelledby="vision-title">
+    <section
+      className="section vision"
+      id="vision"
+      aria-labelledby="vision-title"
+    >
       <div className="container">
         <div className="section_heading">
           <div className="section_label section_label-light">
@@ -243,7 +251,11 @@ function VisionSection() {
 
 function ApproachSection() {
   return (
-    <section className="section approach" id="principles" aria-labelledby="approach-title">
+    <section
+      className="section approach"
+      id="principles"
+      aria-labelledby="approach-title"
+    >
       <div className="container approach_grid-container">
         <div className="approach_description-container">
           <div className="section_label">OUR APPROACH</div>
@@ -280,6 +292,7 @@ function ApproachSection() {
 
 function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [showWhatsAppOptions, setShowWhatsAppOptions] = useState(false);
   function clearForm() {
     setForm({
       name: "",
@@ -287,7 +300,18 @@ function ContactSection() {
       message: "",
     });
   }
-  const companyWhatsApp = "07041684666";
+  const companyWhatsAppNumbers = [
+    {
+      label: "WhatsApp 1",
+      number: "2347041684666",
+    },
+
+    {
+      label: "WhatsApp 2",
+      number: "2348128384863",
+    },
+  ];
+
   const companyEmail = "info@medicfi.gmail.com";
   function createMessage() {
     return `Hello Medic-FI, 
@@ -306,11 +330,15 @@ function ContactSection() {
     return true;
   }
 
-  function handleWhatsApp() {
+  function handleWhatsApp(number) {
     if (!validateForm()) return;
+
     const message = encodeURIComponent(createMessage());
-    const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${message}`;
-    window.open(whatsappURL, "_blank", "noopener, noreferrer");
+    const whatsappURL = `https://wa.me/${number}?text=${message}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+    setShowWhatsAppOptions(false);
     clearForm();
   }
 
@@ -398,14 +426,37 @@ function ContactSection() {
             placeholder="Tell us a little about it..."
           ></textarea>
           <div className="contact_form-actions">
-            <button
-              className="button button_primary contact_form-submit"
-              type="button"
-              onClick={handleWhatsApp}
-            >
-              <MessageCircle size={17} />
-              Send via WhatsApp
-            </button>
+            <div className="contact_whatsapp-wrapper">
+              <button
+                className="button button_primary contact_form-submit"
+                type="button"
+                onClick={() => setShowWhatsAppOptions((previous) => !previous)}
+                aria-expanded={showWhatsAppOptions}
+              >
+                <MessageCircle size={17} />
+                Send via WhatsApp
+              </button>
+
+              {showWhatsAppOptions && (
+                <div className="contact_whatsapp-options">
+                  {companyWhatsAppNumbers.map((contact) => (
+                    <button
+                      key={contact.number}
+                      type="button"
+                      className="contact_whatsapp-option"
+                      onClick={() => handleWhatsApp(contact.number)}
+                    >
+                      <MessageCircle size={17} />
+                      <span>{contact.label}</span>
+                      <span className="contact_whatsapp-number">
+                        +{contact.number}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <button
               className="button button_email contact_form-submit"
               type="button"
@@ -438,9 +489,13 @@ function Footer() {
           <a href="#vision">Our Vision</a>
           <a href="#contact">Contact</a>
         </div>
-        <a href="#home" className="footer_top-link">Back to Top <ArrowUpRight size={17} /></a>
+        <a href="#home" className="footer_top-link">
+          Back to Top <ArrowUpRight size={17} />
+        </a>
         <div className="container footer_bottom">
-          <span>&copy; {new Date().getFullYear()} Medic-FI. Concept Website.</span>
+          <span>
+            &copy; {new Date().getFullYear()} Medic-FI. Concept Website.
+          </span>
           <span>Healthcare journey should not be stressful.</span>
         </div>
       </div>
